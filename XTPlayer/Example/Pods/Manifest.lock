@@ -11,7 +11,7 @@ PODS:
     - SQLiteRepairKit (~> 1.2.0)
     - WCDBOptimizedSQLCipher (~> 1.2.0)
   - WCDBOptimizedSQLCipher (1.2.1)
-  - XTPlayer (0.1.0):
+  - XTPlayer (1.0.0):
     - Alamofire
     - WCDB.swift (= 1.0.7.5)
 
@@ -37,7 +37,7 @@ SPEC CHECKSUMS:
   SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
   WCDB.swift: 87aee41f5ca3aded9c6f9b68b0ef3e88918a5ee2
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
-  XTPlayer: 312682f0fa4976cbcfd3f959d4ada00b3d457a82
+  XTPlayer: f33583f19408adfab71dac9f8791d06346131e67
 
 PODFILE CHECKSUM: 2eefeabdd85bc7a3dda646521a4b743bc4f2809d
 

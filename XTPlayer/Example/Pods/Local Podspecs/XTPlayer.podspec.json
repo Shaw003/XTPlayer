@@ -1,9 +1,9 @@
 {
   "name": "XTPlayer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "一款基于AVPlayer封装的音频播放器。",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/shawtun1211@163.com/XTPlayer",
+  "homepage": "https://github.com/Shaw003/XTPlayer",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,13 +12,14 @@
     "Shaw": "shawtun1211@163.com"
   },
   "source": {
-    "git": "https://github.com/shawtun1211@163.com/XTPlayer.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Shaw003/XTPlayer",
+    "tag": "1.0.0"
   },
+  "social_media_url": "https://www.jianshu.com/u/596fa2382f62",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "XTPlayer/Sources/**/*",
+  "source_files": "Pod/*.swift",
   "dependencies": {
     "Alamofire": [
 

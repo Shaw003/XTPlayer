@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XTPlayer'
-  s.version          = '1.0.0'
+  s.version          = '0.2.0'
   s.summary          = '一款基于AVPlayer封装的音频播放器。'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'XTPlayer/*.swift'
+  s.source_files = 'XTPlayer/Pod/*.swift'
   
   # s.resource_bundles = {
   #   'XTPlayer' => ['XTPlayer/Assets/*.png']
