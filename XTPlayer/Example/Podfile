@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XTPlayer_Example' do
+  pod 'XTPlayer', :path => '../'
+  
+  target 'XTPlayer_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end

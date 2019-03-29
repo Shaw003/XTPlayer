@@ -1,0 +1,6 @@
+framework module XTPlayer {
+  umbrella header "XTPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}
