@@ -25,8 +25,8 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Shaw' => 'shawtun1211@163.com' }
-  s.source           = { :git => 'https://github.com/shawtun1211@163.com/XTPlayer.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/Shaw003/XTPlayer', :tag => s.version.to_s }
+  s.social_media_url = 'https://www.jianshu.com/u/596fa2382f62'
 
   s.ios.deployment_target = '8.0'
 
