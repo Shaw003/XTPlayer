@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XTPlayer'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = '一款基于AVPlayer封装的音频播放器。'
 
 # This description is used to generate tags and improve search results.
