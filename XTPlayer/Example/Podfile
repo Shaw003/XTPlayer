@@ -3,8 +3,5 @@ use_frameworks!
 target 'XTPlayer_Example' do
   pod 'XTPlayer', :path => '../'
 
-  pod 'Alamofire'
-  pod 'WCDB.swift'
-  
-  
+
 end

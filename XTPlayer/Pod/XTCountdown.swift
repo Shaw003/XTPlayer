@@ -143,11 +143,11 @@ public class XTCountdown: NSObject {
         readAllCountdown()
         
         NotificationCenter.default
-            .addObserver(self, selector: #selector(applicationWillResignActive), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+            .addObserver(self, selector: #selector(applicationWillResignActive), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default
-            .addObserver(self, selector: #selector(applicationDidEnterBackground), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+            .addObserver(self, selector: #selector(applicationDidEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         NotificationCenter.default
-            .addObserver(self, selector: #selector(applicationWillTerminate), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
+            .addObserver(self, selector: #selector(applicationWillTerminate), name: UIApplication.willTerminateNotification, object: nil)
     }
     
     /// 根据指定识别码读取计时器
@@ -382,7 +382,7 @@ public class XTCountdown: NSObject {
                 } else {
                     timer.fireDate = Date.distantFuture
                 }
-                RunLoop.current.add(timer, forMode: RunLoopMode.commonModes)
+                RunLoop.current.add(timer, forMode: .common)
             }
             RunLoop.current.run()
         }
@@ -439,7 +439,7 @@ public class XTCountdown: NSObject {
             //如果已存在后台任务，先将其设为完成
             if self.backgroundTaskID != nil {
                 application.endBackgroundTask(self.backgroundTaskID)
-                self.backgroundTaskID = UIBackgroundTaskInvalid
+                self.backgroundTaskID = UIBackgroundTaskIdentifier.invalid
             }
         }
         
@@ -448,7 +448,7 @@ public class XTCountdown: NSObject {
             () -> Void in
             //如果没有调用endBackgroundTask，时间耗尽时应用程序将被终止
             application.endBackgroundTask(self.backgroundTaskID)
-            self.backgroundTaskID = UIBackgroundTaskInvalid
+            self.backgroundTaskID = UIBackgroundTaskIdentifier.invalid
         })
     }
     

@@ -444,11 +444,10 @@ public class XTPlayer: NSObject {
         xt_playerTool.initConfig()
         XTPlayerRecord.initConfig()
         
-        try? AVAudioSession.sharedInstance().setActive(true, with: [])
+        try? AVAudioSession.sharedInstance().setActive(true, options: [])
         
         if #available(iOS 10.0, *) {
-            
-            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, mode: AVAudioSessionModeDefault, options: [.allowBluetooth, .allowAirPlay])
+            try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.allowBluetooth, .allowAirPlay])
         }
         initConfig()
     }
@@ -736,7 +735,7 @@ public class XTPlayer: NSObject {
     // MARK: —————————— 播放进度观察 ——————————
     /// 添加播放进度观察者
     private func addPlayProgressTimeObserver() {
-        timeObserver = self.player?.addPeriodicTimeObserver(forInterval: CMTimeMake(1, 1), queue: nil, using: { [weak self] (time) in
+        timeObserver = self.player?.addPeriodicTimeObserver(forInterval: CMTimeMake(value: 1, timescale: 1), queue: nil, using: { [weak self] (time) in
             
             guard let `self` = self else { return }
             
@@ -1067,10 +1066,10 @@ public class XTPlayer: NSObject {
         }
         
         let value = Int64(Float(totalTime) * to)
-        let seekTime = CMTimeMake(value, 1)
+        let seekTime = CMTimeMake(value: value, timescale: 1)
         
         debugPrint("准备跳转到\(to)")
-        player?.seek(to: seekTime, toleranceBefore: CMTimeMake(1, 1), toleranceAfter: CMTimeMake(1, 1), completionHandler: { [weak self] (finished) in
+        player?.seek(to: seekTime, toleranceBefore: CMTimeMake(value: 1, timescale: 1), toleranceAfter: CMTimeMake(value: 1, timescale: 1), completionHandler: { [weak self] (finished) in
             if finished {
                 guard self?.player?.currentTime() == seekTime else {
                     return
