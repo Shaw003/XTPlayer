@@ -29,8 +29,8 @@ TODO: Add long description of the pod here.
   s.social_media_url = 'https://www.jianshu.com/u/596fa2382f62'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'XTPlayer/*.swift'
+  
+  s.source_files = 'Pod/*.swift'
   
   # s.resource_bundles = {
   #   'XTPlayer' => ['XTPlayer/Assets/*.png']

@@ -234,7 +234,8 @@ public class XTPlayer: NSObject {
     public var progress: Float = 0 {
         didSet {
             currentModelState?.progress = progress
-            currentModelState?.current = UInt(progress * Float(totalTime))
+            let current = progress * Float(totalTime)
+            currentModelState?.current = UInt(round(current))
             updateUI()
         }
     }
@@ -344,7 +345,7 @@ public class XTPlayer: NSObject {
     /** 数据源时长*/
     private (set) public var totalTime: UInt = 0 {
         didSet {
-            let time = xt_playerTool.formatTime(seconds: UInt(totalTime))
+            let time = xt_playerTool.formatTime(seconds: totalTime)
             delegate?.didReadTotalTime(totalTime: totalTime, formatTime: time)
             currentModelState?.duration = totalTime
             updateUI()
@@ -673,7 +674,7 @@ public class XTPlayer: NSObject {
                 let totalTime = xt_playerTool.readDuration(url: urlString)
                 if totalTime > 0 {
                     
-                    self.totalTime = UInt(totalTime)
+                    self.totalTime = totalTime
                     currentTime = UInt(to * Float(totalTime))
                 }
             }
@@ -743,8 +744,8 @@ public class XTPlayer: NSObject {
             let loadedRanges = currentItem.seekableTimeRanges
             if loadedRanges.count > 0, currentItem.duration.timescale != 0 {
                 
-                // 此处取秒数必须要取地板函数，否则会出现最后一秒进度大于总时长的问题
-                let currentTime = floor(CMTimeGetSeconds(time))
+                
+                let currentTime = CMTimeGetSeconds(time)
                 
                 var progress: Float = 0
                 //总时间
@@ -753,7 +754,7 @@ public class XTPlayer: NSObject {
                         let totalTime = CMTimeGetSeconds(duration)
                         
                         if totalTime > 0 {
-                            self.totalTime = UInt(totalTime)
+                            self.totalTime = UInt(ceil(totalTime))
                         }
                     }
                 }
@@ -820,7 +821,7 @@ public class XTPlayer: NSObject {
         let bufferInterval = bufferStart + bufferDuration
         let duration = CMTimeGetSeconds(item.duration)
         if duration > 0 {
-            totalTime = UInt(duration)
+            totalTime = UInt(ceil(duration))
             let bufferProgress = bufferInterval / duration
             if bufferProgress >= 0 && bufferProgress <= 1 {
                 buffer = Float(bufferProgress)
@@ -1056,12 +1057,12 @@ public class XTPlayer: NSObject {
         if xt_playerTool.netStatus == .notReachable {
             if totalTime == 0 && function.contains(.cache) {
                 if let cacheURL = isCached {
-                    totalTime = UInt(xt_playerTool.readDuration(url: cacheURL.absoluteString))
+                    totalTime = xt_playerTool.readDuration(url: cacheURL.absoluteString)
                 }
             }
         } else {
             if totalTime == 0 {
-                totalTime = UInt(xt_playerTool.readDuration(url: currentModel!.xt_playURL!))
+                totalTime = xt_playerTool.readDuration(url: currentModel!.xt_playURL!)
             }
         }
         
