@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         get {
             
             let model1 = CustomAudioModel()
-            model1.audioUrl = "http://admin.jingpinyuedu.com/public/freeaudio/undefined/b01d628503150dd0763fd21150539c46.mp3"
+            model1.audioUrl = "http://sc1.111ttt.cn/2018/1/03/13/396131229550.mp3"
             model1.isFree = 1
             model1.freeTime = 0
             model1.audioTitle = "音频1"
@@ -48,14 +48,14 @@ class ViewController: UIViewController {
             model2.audioTitle = "音频2"
             
             let model3 = CustomAudioModel()
-            model3.audioUrl = "http://admin.jingpinyuedu.com/private/chapter/undefined/dffe6e029934e14aaf8fe633942c73f9.mp3"
+            model3.audioUrl = "http://sc1.111ttt.cn/2018/1/03/13/396131228287.mp3"
             model3.isFree = 0
             model3.freeTime = 0
             model3.audioTitle = "音频3"
 
             /**
              音频1:可以播放完整音频
-             音频2:可以播放50秒
+             音频2:可以播放100秒
              音频3:不可以播放
              */
             return [model1, model2, model3]
