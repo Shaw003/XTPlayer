@@ -197,7 +197,7 @@ xt_player.delegate = self
 实现协议方法，其中`configePlayer`方法为必须要实现的，其它方法是可选的。
 在`configePlayer`方法中，我们需要完成对播放器功能的配置，播放器功能包括如下几种
 
-```
+```Swift
 // MARK: —————————— 播放器功能 ——————————
 public struct XTPlayerFunction : OptionSet {
     /** 默认*/
