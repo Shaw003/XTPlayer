@@ -191,7 +191,7 @@ var allModels: [CustomAudioModel] {
 
 要对播放器的功能进行设置或对各种状态进行监听，需要遵守`XTPlayerDelegate`协议，并设置`XTPlayer`的代理。
 
-```
+```Swift
 xt_player.delegate = self
 ```
 
