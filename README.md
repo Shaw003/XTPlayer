@@ -300,7 +300,7 @@ extension ViewController: XTPlayerDelegate {
 ## XTPlayerStateModel
 在播放过程中，如果需要更新界面信息，XTPlayer通过`updateUI(dataSource: XTPlayerDataSource?, state: XTPlayerState, isPlaying: Bool, detailInfo: XTPlayerStateModel?)`代理方法将可以更新的内容反馈出来，具体播放进度的详细音频信息存储在`XTPlayerStateModel`中。
 
-```
+```Swift
 public class XTPlayerStateModel {
     /** 播放状态*/
     public var state: XTPlayerState = .idle
@@ -336,7 +336,7 @@ func startCountdown(key: String, seconds: UInt, function: XTCountdownFunction = 
 ```
 `XTCountdown`也提供了一些可选功能，包括如下
 
-```
+```Swift
 // MARK: —————————— 定时器功能 ——————————
 public struct XTCountdownFunction: OptionSet {
     
