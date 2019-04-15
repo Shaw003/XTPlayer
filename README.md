@@ -61,9 +61,16 @@ func initConfig() {
 其中，播放源访问权限有3种权限可以设置，分别为
 
 ```Swift
-1. noPermission 没有权限播放
-2. full 完整权限播放
-3. partly(length: UInt) 仅可以播放前length秒的长度
+// MARK: —————————— 播放器数据源类型 ——————————
+public enum XTPlayerSourceType {
+    /** 没有权限*/
+    case noPermission
+    /** 完整播放*/
+    case full
+    /** 部分播放，仅可以播放前length秒的长度*/
+    case partly(length: UInt)
+    
+}
 ```
 开发者可以在自定义模型类中实现这3个属性的`get`方法。
 
