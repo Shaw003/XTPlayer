@@ -7,7 +7,6 @@
 - [使用方式](#使用方式)
 
 ## 功能:
----
 - [x] 支持对音频资源的权限管理
 - [x] 支持播放的同时缓存文件
 - [x] 支持播放时记录播放进度
@@ -19,13 +18,11 @@
 - [o] 支持对音频资源的播放进度进行查询
 
 ## 要求
----
 - iOS 9.0+
 - Xcode 10.1+
 - Swift 4.2+
 
 ## 安装
----
 ### CocoaPods
 
 可以通过`CocoaPods`方式对`XTPlayer`进行集成，在你工程的`Podfile`文件中写上如下代码
@@ -34,13 +31,11 @@
 pod 'XTPlayer'
 ```
 ## 示例工程
----
 你可以从[这里](https://github.com/Shaw003/XTPlayer)将示例工程下载下来，运行`Example`文件夹中的`XTPlayer.xcworkspace`
 ![XTPlayer使用.2019-04-10 14_21_13.gif](https://upload-images.jianshu.io/upload_images/3073983-cd30b323af938b6a.gif?imageMogr2/auto-orient/strip)
 示例工程中只展示了`XTPlayer`的几个功能，还有一些功能并未展示出来，`XTPlayer`实现了数据源的访问权限管理、进度跳转、切换数据源、改变播放速率、缓存音频数据源、区别用户记录播放记录、统计日播放时长、倒计时暂停播放、后台播放、区别用户的历史播放进度跳转等功能。
 
 ## 使用方式
----
 `XTPlayer`内置了一个全局的单例对象，可以使用`xt_player`访问该对象，在使用播放器前需要调用实例方法`active()`来对`XTPlayer`进行初始化，这里同时对计时器进行了初始化操作，如果不需要对播放中的音频进行播放记录同时也不需要设置倒计时关闭播放，这里可以不用初始化计时器。
 
 ```Swift
