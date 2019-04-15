@@ -60,7 +60,7 @@ func initConfig() {
 首先配置播放数据源模型，自建一个自定义对象，需要遵守`XTPlayerDataSource`协议，并实现协议要求的3个属性，分别为`xt_playURL`（对应播放源地址）和`xt_sourceName`（对应播放源名称）以及`xt_sourceType`（对应播放源访问权限）。
 其中，播放源访问权限有3种权限可以设置，分别为
 
-```
+```Swift
 1. noPermission 没有权限播放
 2. full 完整权限播放
 3. partly(length: UInt) 仅可以播放前length秒的长度
