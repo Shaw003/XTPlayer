@@ -15,7 +15,7 @@
 - [x] 处理了弱网环境的播放问题
 - [x] 支持实时更新UI
 - [x] 倒计时暂停播放
-- [o] 支持对音频资源的播放进度进行查询
+- [x] 支持对音频资源的播放进度进行查询
 
 ## 要求
 - iOS 9.0+
@@ -33,6 +33,7 @@ pod 'XTPlayer'
 ## 示例工程
 你可以从[这里](https://github.com/Shaw003/XTPlayer)将示例工程下载下来，运行`Example`文件夹中的`XTPlayer.xcworkspace`
 ![XTPlayer使用.2019-04-10 14_21_13.gif](https://upload-images.jianshu.io/upload_images/3073983-cd30b323af938b6a.gif?imageMogr2/auto-orient/strip)
+
 示例工程中只展示了`XTPlayer`的几个功能，还有一些功能并未展示出来，`XTPlayer`实现了数据源的访问权限管理、进度跳转、切换数据源、改变播放速率、缓存音频数据源、区别用户记录播放记录、统计日播放时长、倒计时暂停播放、后台播放、区别用户的历史播放进度跳转等功能。
 
 ## 使用方式
