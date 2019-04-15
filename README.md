@@ -69,7 +69,6 @@ public enum XTPlayerSourceType {
     case full
     /** 部分播放，仅可以播放前length秒的长度*/
     case partly(length: UInt)
-    
 }
 ```
 开发者可以在自定义模型类中实现这3个属性的`get`方法。
