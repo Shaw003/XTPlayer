@@ -1,5 +1,6 @@
 # XTPlayer
 `XTPlayer`是一款简单易用的基于`AVPlayer`封装的纯`Swift`音频播放器，满足对音频文件播放的基本需求。
+[联系作者](https://www.jianshu.com/p/1b6d8d65f0fd)
 - [功能](#功能)
 - [要求](#要求)
 - [依赖库](#依赖库)
